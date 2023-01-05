@@ -1,0 +1,18 @@
+/************************Layout*****************************/
+
+h1 {
+    color : red;
+}
+
+h2 {
+    color : cornflowerblue;
+}
+
+h3 {
+    color: orange;
+}
+
+.center {
+    text-align: center;
+    list-style-position: inside;
+}
