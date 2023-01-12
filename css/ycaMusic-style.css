@@ -5,14 +5,40 @@ h1 {
 }
 
 h2 {
-    color : cornflowerblue;
+    color : blue;
 }
 
 h3 {
     color: orange;
 }
 
+
+h5 {
+    color: orange;
+}
+
+div > a {
+    color:whitesmoke;
+}
+
+a {
+    color: rgb(9, 255, 4);
+}
+
 .center {
     text-align: center;
     list-style-position: inside;
+}
+
+.jumbotron-m {
+    padding: 0px 25px 0px 25px;
+}
+
+.fontsize-l {
+    font-size: large;
+}
+
+a:hover { 
+    text-decoration: none; 
+    color: orangered;
 }
