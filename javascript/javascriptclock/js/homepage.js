@@ -7,12 +7,10 @@ myName.innerHTML = username;
 let myClock = document.querySelector("#myClock");
 
 function showTime() {
-    var d = new Date(); 
+    var d = new Date();  
+    daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
     
-    d.getHours(); 
-    d.getMinutes(); 
-    d.getSeconds(); 
-    myClock.innerHTML = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+    myClock.innerHTML = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()} ${daylist[d.getDay()]}`;
 }
 
 setInterval(showTime, 1000);
