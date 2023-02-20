@@ -34,7 +34,7 @@ const newElement = () => {
 
     taskList?.appendChild(li);
 
-    li.getAttribute("listener") ? {} : completeTask();
+    completeTask();
   } else {
     //Show alert
     errorAlert.show();
@@ -59,7 +59,7 @@ const removeElement = () => {
   }
 };
 
-const completeTask = (listener) => {
+const completeTask = () => {
   let tasks = document.querySelectorAll("#list > li");
 
   for (let i = 0; i < tasks.length; i++) {
@@ -67,7 +67,7 @@ const completeTask = (listener) => {
       continue;
     }
 
-    if (!listener) {
+    if (!tasks[i].getAttribute("listener")) {
     tasks[i].addEventListener("click", function () {
       this.classList.contains("task-done-color")
         ? this.classList.toggle("task-done-color")
