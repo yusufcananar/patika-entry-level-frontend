@@ -1,3 +1,4 @@
+// Dataset
 const menu = [
   {
     id: 1,
@@ -81,3 +82,25 @@ const menu = [
     desc: `Red bean paste dessert, serving with honey.`,
   },
 ];
+
+// define button classes
+let btnClasses = ["btn-item", "btn", "btn-outline-dark"];
+
+// Get the category list
+const categories = ["All", ...new Set(menu.map(item => {
+  return item.category;
+}))];
+
+// get the button container (category menu)
+const btnContainer = document.querySelector(".btn-container");
+
+// Add buttons w.r.t. categories
+categories.forEach(category => {
+  let filterBtn = document.createElement("button");
+  filterBtn.classList.add(...btnClasses);
+  filterBtn.setAttribute("id", `cat-${category}`)
+  filterBtn.innerHTML = `${category}`;
+  btnContainer?.appendChild(filterBtn);
+});
+
+
