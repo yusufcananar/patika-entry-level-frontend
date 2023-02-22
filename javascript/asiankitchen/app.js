@@ -217,14 +217,15 @@ categories.forEach(category => {
     selectedCategory = category;
 
     let toBeRemoved = getChildrenExceptGivenCategory("#menu-section", selectedCategory);
-
+    console.log(toBeRemoved)
     let toBeKept = getChildrenByCategory("#menu-section", selectedCategory);
   
     // create items from menu dataset
     let shownMenu = menu.filter(item => checkCategory(item));
     clearMenuItems(toBeRemoved); // category değiştiğinde length'e bak
-
-    shownMenu.length > 0 ? showMenu(shownMenu) : showMenu(menu);
+    if ( toBeKept.length <= 0 ){
+      shownMenu.length > 0 ? showMenu(shownMenu) : showMenu(menu);
+    }
   });
   // -------------------END - Add event listener to each category button-------------------
   btnContainer?.appendChild(filterBtn);
